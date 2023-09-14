@@ -1,9 +1,13 @@
 # Change Log
 
-All notable changes to the "hello" extension will be documented in this file.
+All notable changes to the "notOnlyHello" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [v0.1.1]
 
-- Initial release
+- Added a new function to view folder information. Updated the README.md and description.
+
+## [v0.1.0]
+
+- Welcome message and view file information.

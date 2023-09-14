@@ -1,8 +1,8 @@
 {
   "name": "not-noly-hello",
   "displayName": "notOnlyHello",
-  "description": "",
-  "version": "0.1.0",
+  "description": "'notOnlyHello' is not just a greeting extension, but also a quick right-click to view file or folder information~",
+  "version": "0.1.1",
   "publisher": "LoveScript",
   "engines": {
     "vscode": "^1.82.0"
