@@ -16,8 +16,7 @@
   },
   "activationEvents": [
     "onStartupFinished",
-    "onCommand: fileConfig",
-    "onCommand: changeID"
+    "onCommand: fileConfig"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -25,10 +24,6 @@
       {
         "command": "fileConfig",
         "title": "文件信息"
-      },
-      {
-        "command": "changeID",
-        "title": "Hello"
       }
     ],
     "menus": {
@@ -42,12 +37,6 @@
         {
           "command": "fileConfig",
           "group": "navigation@1"
-        }
-      ],
-      "commandPalette": [
-        {
-          "command": "changeID",
-          "group": "user"
         }
       ]
     },
