@@ -103,13 +103,26 @@ function activate(context) {
 				const creatTime = stats.birthtime.toLocaleString();
 				const modifyTime = stats.mtime.toLocaleString();
 				output = vscode.window.createOutputChannel('文件信息');
-				output.appendLine (`
-					文件大小为：${divideAndRound(size, 1024)}KiB;
-					文件创建于：${creatTime};
-					文件修改于：${modifyTime};
-					文件路径为：${capitalizeFirstLetter(Path)};`
-				);
-				output.show(true);
+				if(parseFloat(divideAndRound(size, 1024)) > parseInt('1024'))
+				{
+					output.appendLine (`
+						文件大小为：${divideAndRound(size, 1024*1024)}MiB
+						文件创建于：${creatTime}
+						文件修改于：${modifyTime}
+						文件路径为：${capitalizeFirstLetter(Path)}`
+					);
+					output.show(true);
+				}
+				else
+				{
+					output.appendLine (`
+						文件大小为：${divideAndRound(size, 1024)}KiB
+						文件创建于：${creatTime}
+						文件修改于：${modifyTime}
+						文件路径为：${capitalizeFirstLetter(Path)}`
+					);
+					output.show(true);
+				}
 			}
 		});
 	});
