@@ -3,6 +3,7 @@
 const vscode = require('vscode');
 const path = require('path');
 const fs = require('fs');
+const { Console } = require('console');
 let output = true;
 
 // This method is called when your extension is activated
@@ -86,16 +87,30 @@ function activate(context) {
 					return totalSize;
 				}
 				const size = getFolderSize(Path);
+				//console.log(size);
 				const creatTime = stats.birthtime.toLocaleString();
 				const modifyTime = stats.mtime.toLocaleString();
 				output = vscode.window.createOutputChannel('文件夹信息');
-				output.appendLine (`
-					文件夹大小为：${divideAndRound(size, 1024)}KiB;
-					文件夹创建于：${creatTime};
-					文件夹修改于：${modifyTime};
-					文件夹路径为：${capitalizeFirstLetter(Path)};`
-				);
-				output.show(true);
+				if(parseFloat(divideAndRound(size, 1024)) > parseInt('1024'))
+				{
+					output.appendLine (`
+						文件大小为：${divideAndRound(size, 1024*1024)}MiB
+						文件创建于：${creatTime}
+						文件修改于：${modifyTime}
+						文件路径为：${capitalizeFirstLetter(Path)}`
+					);
+					output.show(true);
+				}
+				else
+				{
+					output.appendLine (`
+						文件大小为：${divideAndRound(size, 1024)}KiB
+						文件创建于：${creatTime}
+						文件修改于：${modifyTime}
+						文件路径为：${capitalizeFirstLetter(Path)}`
+					);
+					output.show(true);
+				}
 			}
 			if(stats.isFile())
 			{
