@@ -1,0 +1,111 @@
+{
+  "name": "not-noly-hello",
+  "displayName": "notOnlyHello",
+  "description": "",
+  "version": "0.1.0",
+  "publisher": "LoveScript",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waiterLoveScript/notOnlyHello"
+  },
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand: fileConfig",
+    "onCommand: changeID"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fileConfig",
+        "title": "文件信息"
+      },
+      {
+        "command": "changeID",
+        "title": "Hello"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "fileConfig",
+          "group": "navigation@1"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "fileConfig",
+          "group": "navigation@1"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "changeID",
+          "group": "user"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Hello Config",
+      "properties": {
+        "hello.1.if": {
+          "type": "boolean",
+          "default": true,
+          "description": "Do you want to say hello?"
+        },
+        "hello.2.id": {
+          "type": "string",
+          "default": "code",
+          "description": "Your id"
+        },
+        "hello.3.midnight": {
+          "type": "string",
+          "default": "晚安啦您嘞",
+          "description": "What you want to say at midnight"
+        },
+        "hello.4.morning": {
+          "type": "string",
+          "default": "今天吃早餐了吗",
+          "description": "What you want to say at morning"
+        },
+        "hello.5.midday": {
+          "type": "string",
+          "default": "今天天气怎么样呢",
+          "description": "What you want to say at midday"
+        },
+        "hello.6.afternoon": {
+          "type": "string",
+          "default": "祝您的代码无bug呀",
+          "description": "What you want to say at afternoon"
+        },
+        "hello.7.evening": {
+          "type": "string",
+          "default": "要看看月亮看看星空哦",
+          "description": "What you want to say at evening"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
