@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+ 
+[HKEY_CLASSES_ROOT\runExe]
+@="URL:runExe Protocol"
+"URL Protocol"=""
+ 
+[HKEY_CLASSES_ROOT\runExe\DefaultIcon]
+@="runExe.exe,1"
+ 
+[HKEY_CLASSES_ROOT\runExe\shell]
+ 
+[HKEY_CLASSES_ROOT\runExe\shell\run]
+ 
+[HKEY_CLASSES_ROOT\runExe\shell\run\command]
+@="cmd /c set m=%1 & \"runExe.bat\" %%m%% %2 & exit"

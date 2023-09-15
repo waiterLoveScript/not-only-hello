@@ -17,7 +17,8 @@
   "icon": "resources/icon1.jpg",
   "activationEvents": [
     "onStartupFinished",
-    "onCommand: fileConfig"
+    "onCommand: fileConfig",
+    "onCommand: runExe"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -25,6 +26,10 @@
       {
         "command": "fileConfig",
         "title": "文件信息"
+      },
+      {
+        "command": "runExe",
+        "title": "运行可执行文件"
       }
     ],
     "menus": {
@@ -38,6 +43,10 @@
         {
           "command": "fileConfig",
           "group": "navigation@1"
+        },
+        {
+          "command": "runExe",
+          "group": "navigation@2"
         }
       ]
     },

@@ -9,9 +9,10 @@ function activate(context) {
 		// The code you place here will be executed every time your command is executed
 
 		// Display a message box to the user
-		console.log('Hello from hello!');
+		console.log('Congratulations, your module "information" is now active!');
 
 		const Path = uri.path.substring(1);
+		console.log(Path);
 
 		/**
 		 * 将字符串的第一个字母大写
