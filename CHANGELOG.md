@@ -1,8 +1,12 @@
 # Change Log
 
-All notable changes to the "notOnlyHello" extension will be documented in this file.
+All notable changes to the "Not Only Hello" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+
+## [v0.2.1]
+
+- Changed icon and displayname.
 
 ## [v0.2.0]
 

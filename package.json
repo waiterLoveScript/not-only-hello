@@ -1,8 +1,8 @@
 {
   "name": "not-noly-hello",
-  "displayName": "notOnlyHello",
-  "description": "'notOnlyHello' is not just a greeting extension, but also a quick right-click to view file or folder information and so on~",
-  "version": "0.2.0",
+  "displayName": "Not Only Hello",
+  "description": "'Not Only Hello' is not just a greeting extension, but also a quick right-click to view file or folder information and so on~",
+  "version": "0.2.1",
   "publisher": "LoveScript",
   "engines": {
     "vscode": "^1.82.0"
@@ -12,8 +12,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/waiterLoveScript/notOnlyHello"
+    "url": "https://github.com/waiterLoveScript/not-only-hello"
   },
+  "icon": "resources/icon1.jpg",
   "activationEvents": [
     "onStartupFinished",
     "onCommand: fileConfig"

@@ -30,7 +30,7 @@ function activate(context) {
 	});
 
 
-	// BUG: You must manually open a file to enable highlighting
+	// BUG: You must manually open a file to enable highlighting.
     const highlight1 = vscode.workspace.onDidOpenTextDocument(document => {
 		if
 		(

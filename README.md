@@ -13,6 +13,4 @@
 
 1. You can open Settings and search for <font color="yellow">**"Hello Config"**</font> to modify the default settings.
 
-2. If the settings don't meet your needs, you can customize the greeting by reading the <font color="yellow">**"hello.js"**</font> file.</br>You can find this file in the VSCode plugin directory.</br>On my computer this path is C:/Users/86157/.vscode/extensions/lovescript.not-noly-hello-0.1.0/include/hello.js.
-
-3. Sorry, this extension currently only supports Windows~
+2. If the settings don't meet your needs, you can customize the greeting by reading the <font color="yellow">**"include"**</font> folder.You can find this file in the VSCode plugin directory.</br>On my computer this path is C:/Users/86157/.vscode/extensions/lovescript.not-noly-hello-0.1.0/include/.
