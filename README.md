@@ -4,7 +4,7 @@
 
 2. We have registered the command <font color="yellow">**"File Information"**</font> in the context menu, which you can click on to view the current file or folder size, creation time, modification time, and file path.
 
-3. Support for highlighting specific annotations. Currently only C, CPP, JS, TS, JAVA files are supported.
+3. Support for highlighting specific annotations. Currently only C, CPP, JAVASCRIPT, TYPESCRIPT, JAVA files are supported.
 ![example](./resources/exp1.png "example")
 
 4. More features are still in development, so stay tuned~

@@ -69,8 +69,8 @@ function activate(context) {
 		if(editor && (
 			editor.document.languageId === 'c' ||
 			editor.document.languageId === 'cpp' ||
-			editor.document.languageId === 'js' ||
-			editor.document.languageId === 'ts' ||
+			editor.document.languageId === 'javascript' ||
+			editor.document.languageId === 'typescript' ||
 			editor.document.languageId === 'java'))
 		{
 			console.log('active editor change!');
