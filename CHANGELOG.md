@@ -4,13 +4,17 @@ All notable changes to the "notOnlyHello" extension will be documented in this f
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [v0.2.0]
+
+- Implement specific annotation highlighting.</br>
+
 ## [v0.1.3]
 
-- Fixed a bug
+- Fixed a bug.
 
 ## [v0.1.2]
 
-- Optimized the file information function
+- Optimized the file information function.
 
 ## [v0.1.1]
 

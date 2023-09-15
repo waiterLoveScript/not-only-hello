@@ -1,6 +1,6 @@
 const vscode = require('vscode');
 
-function activate(context) {
+function activate() {
     console.log('Congratulations, your module "hello" is now active!');
     if(vscode.workspace.getConfiguration().get('hello.1.if'))
 	{
