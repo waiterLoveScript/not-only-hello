@@ -4,13 +4,17 @@ All notable changes to the "Not Only Hello" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [v0.3.0]
+
+- Added the ability to run executables quickly.
+
 ## [v0.2.1]
 
 - Changed icon and displayname.
 
 ## [v0.2.0]
 
-- Implement specific annotation highlighting.</br>
+- Implement specific annotation highlighting.
 
 ## [v0.1.3]
 

@@ -14,23 +14,23 @@ function activate() {
 		const midnight = vscode.workspace.getConfiguration().get('hello.3.midnight');
 		if(currentHour >= 18)
 		{
-			vscode.window.showInformationMessage(`晚上好${USER_ID}, ${evening}!`);
+			vscode.window.showInformationMessage(`晚上好${USER_ID}, ${evening}`);
 		}
 		else if(currentHour >= 14 && currentHour < 18)
 		{
-			vscode.window.showInformationMessage(`下午好${USER_ID}, ${afternoon}!`);
+			vscode.window.showInformationMessage(`下午好${USER_ID}, ${afternoon}`);
 		}
 		else if(currentHour >= 11 && currentHour < 14)
 		{
-			vscode.window.showInformationMessage(`中午好${USER_ID}, ${midday}!`);
+			vscode.window.showInformationMessage(`中午好${USER_ID}, ${midday}`);
 		}
 		else if(currentHour >= 5 && currentHour < 11)
 		{
-			vscode.window.showInformationMessage(`早上好${USER_ID}, ${morning}!`);
+			vscode.window.showInformationMessage(`早上好${USER_ID}, ${morning}`);
 		}
 		else
 		{
-			vscode.window.showInformationMessage(`很晚了${USER_ID}, ${midnight}!`);
+			vscode.window.showInformationMessage(`很晚了${USER_ID}, ${midnight}`);
 		}
 	}
 }

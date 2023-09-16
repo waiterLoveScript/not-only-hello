@@ -1,8 +1,8 @@
 {
   "name": "not-noly-hello",
   "displayName": "Not Only Hello",
-  "description": "'Not Only Hello' is not just a greeting extension, but also a quick right-click to view file or folder information and so on~",
-  "version": "0.2.1",
+  "description": "hello, file size, highlight, run exe",
+  "version": "0.3.0",
   "publisher": "LoveScript",
   "engines": {
     "vscode": "^1.82.0"
@@ -66,27 +66,27 @@
         },
         "hello.3.midnight": {
           "type": "string",
-          "default": "晚安啦您嘞",
+          "default": "晚安啦您嘞!",
           "description": "What you want to say at midnight"
         },
         "hello.4.morning": {
           "type": "string",
-          "default": "今天吃早餐了吗",
+          "default": "今天吃早餐了吗!",
           "description": "What you want to say at morning"
         },
         "hello.5.midday": {
           "type": "string",
-          "default": "今天天气怎么样呢",
+          "default": "今天天气怎么样呢!",
           "description": "What you want to say at midday"
         },
         "hello.6.afternoon": {
           "type": "string",
-          "default": "祝您的代码无bug呀",
+          "default": "祝您的代码无bug呀!",
           "description": "What you want to say at afternoon"
         },
         "hello.7.evening": {
           "type": "string",
-          "default": "要看看月亮看看星空哦",
+          "default": "要看看月亮看看星空哦!",
           "description": "What you want to say at evening"
         },
         "highlight.1.if": {
