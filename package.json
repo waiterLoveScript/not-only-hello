@@ -2,7 +2,7 @@
   "name": "not-noly-hello",
   "displayName": "Not Only Hello",
   "description": "hello, file size, highlight, run exe",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "publisher": "LoveScript",
   "engines": {
     "vscode": "^1.82.0"

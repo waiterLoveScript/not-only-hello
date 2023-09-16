@@ -14,7 +14,7 @@ function activate(context) {
         try
         {
             const terminal = vscode.window.createTerminal();
-            terminal.sendText(`start ${exePath}`);
+            terminal.sendText(`start "" "${exePath}"`);
             //terminal.dispose();
         }
         catch(error)
