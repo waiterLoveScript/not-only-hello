@@ -10,17 +10,52 @@ function activate(context) {
         //const testPath = "start D:/MyCode/DevCpp/bin/test.exe";
         //const args = [];
         console.log(exePath);
+        //let command = `start "" "${exePath}"`;
+        const terminal = vscode.window.createTerminal({
+            shellPath: "cmd.exe",
+            //shellArgs: ['-NoExit', '-Command', command]
+        });
+        //let commandCompleted = false;
 
         try
         {
-            const terminal = vscode.window.createTerminal();
             terminal.sendText(`start "" "${exePath}"`);
             //terminal.dispose();
+            //setTimeout(() => { terminal.dispose(); }, 5000);
+            /*terminal.onDidClose(() => {
+                console.log("Terminal closed");
+            });*/
+            console.log(terminal.processId);
         }
         catch(error)
         {
             console.error("ERROR!", error);
         }
+        const interval = setInterval(() => {
+            if(!terminal.processId)
+            {
+                terminal.dispose();
+                clearInterval(interval);
+            }
+        }, 1000);
+        
+
+        // XXX: Why this code doesn't run correctly
+        /*terminal.onDidExitProcess((e) => {
+            if(e.exitCode === 0)
+            {
+                commandCompleted = true;
+            }
+            else
+            {
+                vscode.window.showErrorMessage('Failed!');
+            }
+        });
+        while(!commandCompleted)
+        {
+            new Promise(resolve => setTimeout(resolve, 100));
+        }
+        terminal.dispose();*/
 
 
         // XXX: Why this code doesn't run correctly

@@ -4,6 +4,10 @@ All notable changes to the "Not Only Hello" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [v0.3.2]
+
+- Optimized some features and added random greeting functionality.
+
 ## [v0.3.1]
 
 - Fixed an issue where executables under paths with spaces would not run.

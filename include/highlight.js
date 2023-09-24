@@ -4,6 +4,11 @@ function activate(context) {
 
     console.log('Congratulations, your module "highlight" is now active!');
 
+	function isSupportedLanguage(languageId)
+	{
+		return ['c', 'cpp', 'javascript', 'typescript', 'java'].includes(languageId);
+	}
+
     const todoType = vscode.window.createTextEditorDecorationType({
 		backgroundColor: 'rgb(252, 211, 55)',		//柠檬黄
 		isWholeLine: false
@@ -66,12 +71,13 @@ function activate(context) {
 
 
     const highlight2 = vscode.window.onDidChangeActiveTextEditor((editor) => {
-		if(editor && (
+		if(/*editor && (
 			editor.document.languageId === 'c' ||
 			editor.document.languageId === 'cpp' ||
 			editor.document.languageId === 'javascript' ||
 			editor.document.languageId === 'typescript' ||
-			editor.document.languageId === 'java'))
+			editor.document.languageId === 'java')*/
+			isSupportedLanguage(editor.document.languageId))
 		{
 			console.log('active editor change!');
 			const doc = editor.document;
@@ -97,7 +103,8 @@ function activate(context) {
 			function getTODOComments(document)
 			{
 				const text = document.getText();
-				const regex = /\/\/\s*TODO:.*/g;
+				//const regex = /\/\/\s*TODO:.*/g;
+				const regex = /\/\/\s*TODO:.*|\/\*\s*TODO:(.|\s)*?\*\//g;
 				let match;
 				const ranges = [];
 				while((match = regex.exec(text)))
@@ -112,7 +119,7 @@ function activate(context) {
 			function getFIXMEComments(document)
 			{
 				const text = document.getText();
-				const regex = /\/\/\s*FIXME:.*/g;
+				const regex = /\/\/\s*FIXME:.*|\/\*\s*FIXME:(.|\s)*?\*\//g;
 				let match;
 				const ranges = [];
 				while((match = regex.exec(text)))
@@ -127,7 +134,7 @@ function activate(context) {
 			function getBUGComments(document)
 			{
 				const text = document.getText();
-				const regex = /\/\/\s*BUG:.*/g;
+				const regex = /\/\/\s*BUG:.*|\/\*\s*BUG:(.|\s)*?\*\//g;
 				let match;
 				const ranges = [];
 				while((match = regex.exec(text)))
@@ -142,7 +149,7 @@ function activate(context) {
 			function getDONEComments(document)
 			{
 				const text = document.getText();
-				const regex = /\/\/\s*DONE:.*/g;
+				const regex = /\/\/\s*DONE:.*|\/\*\s*DONE:(.|\s)*?\*\//g;
 				let match;
 				const ranges = [];
 				while((match = regex.exec(text)))
@@ -157,7 +164,7 @@ function activate(context) {
 			function getXXXComments(document)
 			{
 				const text = document.getText();
-				const regex = /\/\/\s*XXX:.*/g;
+				const regex = /\/\/\s*XXX:.*|\/\*\s*XXX:(.|\s)*?\*\//g;
 				let match;
 				const ranges = [];
 				while((match = regex.exec(text)))

@@ -2,7 +2,7 @@
   "name": "not-noly-hello",
   "displayName": "Not Only Hello",
   "description": "hello, file size, highlight, run exe",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "publisher": "LoveScript",
   "engines": {
     "vscode": "^1.82.0"
@@ -18,7 +18,8 @@
   "activationEvents": [
     "onStartupFinished",
     "onCommand: fileConfig",
-    "onCommand: runExe"
+    "onCommand: runExe",
+    "onCommand: openHelloTxt"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -30,6 +31,10 @@
       {
         "command": "runExe",
         "title": "运行可执行文件"
+      },
+      {
+        "command": "openHelloTxt",
+        "title": "打开hello.txt"
       }
     ],
     "menus": {
@@ -46,7 +51,8 @@
         },
         {
           "command": "runExe",
-          "group": "navigation@2"
+          "group": "navigation@2",
+          "when": "resourceFilename =~ /\\.exe$/"
         }
       ]
     },
@@ -54,9 +60,14 @@
       "type": "object",
       "title": "Hello Config",
       "properties": {
-        "hello.1.if": {
-          "type": "boolean",
-          "default": true,
+        "hello.1.hello": {
+          "type": "string",
+          "enum": [
+            "default",
+            "random",
+            "nothing"
+          ],
+          "default": "default",
           "description": "Do you want to say hello?"
         },
         "hello.2.id": {

@@ -5,6 +5,7 @@ const hello = require('./include/hello');
 const information = require('./include/information');
 const highlight = require('./include/highlight');
 const exec = require('./include/exec');
+
 let output = true;
 
 // This method is called when your extension is activated
@@ -31,6 +32,8 @@ function activate(context) {
 
 
 	hello.activate(context);
+
+
 }
 
 

@@ -1,8 +1,28 @@
 const vscode = require('vscode');
+const path = require('path');
+const fs = require('fs');
 
-function activate() {
+const moduleDir = path.dirname(__filename);
+const hellosFilePath = path.join(moduleDir, 'hello.txt');
+
+function activate(context) {
     console.log('Congratulations, your module "hello" is now active!');
-    if(vscode.workspace.getConfiguration().get('hello.1.if'))
+
+	let disposable = vscode.commands.registerCommand('openHelloTxt', () => {
+		if(!fs.existsSync(hellosFilePath))
+		{
+			fs.writeFileSync(hellosFilePath, 'One greeting per line, do not appear blank lines, this line can be deleted', 'utf-8');
+		}
+		vscode.workspace.openTextDocument(vscode.Uri.file(hellosFilePath)).then((document) => {
+			vscode.window.showTextDocument(document);
+		}).catch((error) => {
+			vscode.window.showErrorMessage(`Failed to open text file: ${error.message}`);
+		});
+	});
+	context.subscriptions.push(disposable);
+
+	// DONE: default
+    if(vscode.workspace.getConfiguration().get('hello.1.hello') === 'default')
 	{
 		let USER_ID = vscode.workspace.getConfiguration().get('hello.2.id');
 		const currentDate = new Date();
@@ -33,6 +53,27 @@ function activate() {
 			vscode.window.showInformationMessage(`很晚了${USER_ID}, ${midnight}`);
 		}
 	}
+
+	// DONE: random
+	else if(vscode.workspace.getConfiguration().get('hello.1.hello') === 'random')
+	{
+		console.log(hellosFilePath);
+    	function getHellos()
+    	{
+        	const hellos = fs.readFileSync(hellosFilePath, 'utf8').split('\n');
+        	return hellos.filter(hello => hello.trim() !== '');
+    	}
+    	function getRandomHello()
+    	{
+        	const hellos = getHellos();
+        	const randomIndex = Math.floor(Math.random() * hellos.length);
+        	console.log(randomIndex);
+        	return hellos[randomIndex];
+    	}
+    	const hello = getRandomHello();
+    	vscode.window.showInformationMessage(hello);
+	}
+
 }
 
 exports.activate = activate;
