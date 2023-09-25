@@ -1,6 +1,6 @@
 const vscode = require('vscode');
 
-function activate(context) {
+async function activate(context) {
 
     console.log('Congratulations, your module "highlight" is now active!');
 

@@ -7,7 +7,7 @@
 3. You can quickly run an exe file by clicking Run Executable in the right-click menu.
 
 4. Support for highlighting specific annotations. Currently only C, CPP, JAVASCRIPT, TYPESCRIPT, JAVA files are supported.
-![example](resources/exp1.png "example")
+![example](resources/pictures/exp1.png "example")
 
 5. More features are still in development, so stay tuned~
 

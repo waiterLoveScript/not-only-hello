@@ -2,7 +2,7 @@ const vscode = require('vscode');
 //const { exec } = require('child_process');
 //const { execFile } = require('child_process');
 
-function activate(context) {
+async function activate(context) {
     let disposable = vscode.commands.registerCommand('runExe', uri => {
         console.log('Congratulations, your module "exec" is now active!');
         //const regFilePath = 'runExe/runReg.reg';

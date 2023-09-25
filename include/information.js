@@ -4,7 +4,7 @@ const fs = require('fs');
 
 let output = true;
 
-function activate(context) {
+async function activate(context) {
     const disposable = vscode.commands.registerCommand('fileConfig', uri => {
 		// The code you place here will be executed every time your command is executed
 

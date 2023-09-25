@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/waiterLoveScript/not-only-hello"
   },
-  "icon": "resources/icon1.jpg",
+  "icon": "resources/pictures/icon1.jpg",
   "activationEvents": [
     "onStartupFinished",
     "onCommand: fileConfig",

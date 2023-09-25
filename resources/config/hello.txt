@@ -1,0 +1,147 @@
+# from https://zhuanlan.zhihu.com/p/617439313
+#
+#导航快捷键
+#导航快捷键就像你的代码的GPS系统。它们帮助你快速有效地到达你需要的地方。无论你是在寻找特定的代码行，还是试图在不同的文件之间进行导航，这些快捷键都会为你节省时间并帮助你保持有序。
+Ctrl + G：转到行/列
+Ctrl + P：转到文件
+Ctrl + Shift + O：转到编辑器中的符号
+Ctrl + Shift + M：转到问题
+Ctrl + Shift + F：在文件中查找
+Ctrl + Shift + H：在文件中替换
+Ctrl + Shift + E：打开文件资源管理器
+Ctrl + Shift + V：打开Markdown预览
+Ctrl + Shift + D：打开调试器
+Ctrl + Shift + X：打开扩展程序
+#
+#编辑快捷键
+#编辑快捷键是编码的画笔和凿子。它们允许你塑造你的代码并创造一些美丽的东西。从剪切和粘贴到撤销错误，这些快捷键将帮助你完善你的代码，直到它恰到好处。
+Ctrl + C：复制
+Ctrl + X：剪切
+Ctrl + V：粘贴
+Ctrl + Z：撤销
+Ctrl + Y：重做
+Ctrl + F：查找
+Ctrl + H：替换
+Ctrl + D：添加下一个匹配项
+Ctrl + Shift + L：选择所有匹配项
+Ctrl + K + S：键盘快捷键编辑器
+#
+#多光标快捷键
+Ctrl + Alt + Up/Down：在上面/下面添加光标
+Ctrl + Alt + Shift + Up/Down：向上/向下复制一行
+Ctrl + Shift + Alt + Right：列选择模式
+Ctrl + Shift + Alt + Left：退出列选择模式
+Ctrl + Shift + Alt + Drag：列选择模式
+#
+#终端快捷键
+#终端快捷键就像一条通往代码核心的秘密通道。它们使你能够直接访问命令行，使你能够执行命令并与你的代码进行更深层次的互动。有了这些快捷键，你就能像忍者一样浏览你的代码了。
+Ctrl + `：打开集成终端
+Ctrl + Shift + `：新建终端
+Ctrl + Shift + T：重新打开上次关闭的终端
+Ctrl + Shift + C：复制选择到终端
+Ctrl + Shift + V：粘贴到终端
+#
+#调试快捷键
+#调试快捷键就像你的代码的侦探工具包。它们可以帮助你找到并修复代码中的错误，使你能够创建更加强大和稳定的应用程序。无论你是在调试一个单行还是追踪整个程序，这些快捷键都能帮助你解决这个问题。
+F5：启动调试
+F9：切换断点
+F10：单步跳过
+F11：单步执行
+Shift + F11：单步停止
+F12：转到定义
+Alt + Click：设置临时中断点
+#
+#文件管理快捷键
+#文件管理快捷键帮助你在VS Code中导航和管理文件和文件夹。你可以快速创建、打开、保存和关闭文件，也可以重新打开已关闭的标签。在处理有许多文件的大型项目时，”按名称快速打开文件 “的快捷键特别有用。此外，你可以打开一个新的窗口或工作区，以保持你的工作有序。这些快捷键有助于简化你的工作流程，使你的项目文件有条不紊，易于访问。
+Ctrl + N (Windows/Linux) 或 Command + N (Mac)：创建一个新文件。
+Ctrl + O (Windows/Linux) 或 Command + O (Mac)：打开一个文件。
+Ctrl + S (Windows/Linux) 或 Command + S (Mac)：保存当前文件。
+Ctrl + Shift + S (Windows/Linux) 或 Command + Shift + S (Mac)：保存所有打开的文件。
+Ctrl + W (Windows/Linux) 或 Command + W (Mac)：关闭当前标签。
+Ctrl + Shift + T (Windows/Linux) 或 Command + Shift + T (Mac)：重新打开上次关闭的标签。
+Ctrl + P (Windows/Linux) 或 Command + P (Mac)：按名称快速打开文件。
+Ctrl + Shift + N (Windows/Linux) 或 Command + Shift + N (Mac)：打开一个新窗口。
+#
+#Git快捷键
+#Git快捷键就像你的代码的时间机器。它们允许你管理你的版本控制，恢复修改，并与他人合作。有了这些快捷键，你就能自信地处理你的代码了，因为你知道如果出了问题，你可以随时回到过去。
+Ctrl + Shift + G：打开Git窗格
+Ctrl + Shift + P, then Git：阶段性选择修改
+Ctrl + Shift + P, then Git：提交
+Ctrl + Shift + P, then Git：推送
+Ctrl + Shift + P, then Git：拉取
+#
+#代码格式化快捷键
+Shift + Alt + F：格式代码
+Ctrl + K + Ctrl + F：打开格式选择菜单
+Ctrl + K + Ctrl + C：注释选择
+Ctrl + K + Ctrl + U：取消注释选择
+Alt + Up/Down：上/下移行
+Ctrl + Shift + K：删除当前行
+#
+#代码折叠快捷键
+Ctrl + Shift + [ or ]：折叠或展开当前区域
+Ctrl + K + Ctrl + [ or ]：折叠或展开所有区域
+Ctrl + K + Ctrl + 0：折叠所有区域
+Ctrl + K + Ctrl + J：展开所有区域
+#
+#工作区快捷键
+#工作区快捷键就像你的编码环境的私人助理。他们帮助你管理你的项目，保存你的工作，并自定义你的设置。无论你是在做一个单独的项目，还是与团队合作，这些快捷键都能让你的工作区变得有条不紊、高效。
+Ctrl + Shift + T：添加文件到工作区
+Ctrl + K + Ctrl + W：关闭工作区
+Ctrl + K + Ctrl + O：打开工作区
+Ctrl + K + Ctrl + S：保存工作区
+Ctrl + K + Ctrl + P：首选项： 打开用户设置
+Ctrl + K + Ctrl + F：首选项： 打开工作区设置
+#
+#Markdown快捷键
+#Markdown快捷键就像你的代码的书法笔。它们允许你为你的注释和文档添加风格和亮点。从粗体和斜体到标题和列表，这些快捷键将帮助你使你的代码更具有可读性和视觉吸引力。
+Ctrl + B：加粗
+Ctrl + I：斜体
+Ctrl + U：下划线
+Ctrl + K + V：作为Markdown粘贴
+Ctrl + Shift + V：切换到Markdown预览
+Ctrl + K + V：侧栏Markdown预览
+#
+#Zen模式快捷键
+#Zen模式的快捷键就像为你的编码环境做了一次SPA。它们帮助你最大限度地减少干扰，专注于你的工作，并找到内心的平静。无论你是感到压力过大还是需要休息，这些快捷键都能帮助你放松并保持工作效率。
+Ctrl + K + Z：进入Zen模式
+Esc：退出Zen模式
+Ctrl + K + Shift + F：切换全屏幕
+Ctrl + K + Shift + R：切换中心布局
+#
+#窗口管理快捷键
+#窗口管理快捷键就像你的编码环境的一个舞台导演。它们帮助你管理打开的标签和编辑器组，让你一次只关注一个任务。有了这些快捷键，你就能最大限度地利用你的屏幕空间，并保持你的工作空间的有序性。
+Ctrl + W：关闭当前标签
+Ctrl + Shift + T：重新打开已关闭的标签
+Ctrl + K + F：打开全屏模式
+Ctrl + K + Left/Right：切换到上一个/下一个编辑组
+Ctrl + Shift + Left/Right：将编辑器移到上一个/下一个编辑组： 将编辑器移到上一个/下一个编辑器组
+#
+#重构快捷键
+#重构快捷键就像你的代码的雕塑家工具。它们允许你重新塑造和改进你的代码，而不必从头开始。无论你是需要重命名一个符号还是提取一个函数，这些快捷键都可以帮助你完善你的代码，直到它变得完美。
+F2：重命名符号
+Ctrl + Shift + M：提取方法
+Ctrl + Shift + F：提取函数
+Ctrl + Shift + R：重构选定的代码
+#
+#IntelliSense快捷键
+#IntelliSense快捷键就像你的代码的一个心理朋友。它们帮助你预测你接下来要输入的内容，并根据你的上下文提供建议。有了这些快捷键，你就能更快、更准确地进行编码，而不必去查找语法和参数。
+Ctrl + Space：触发完成
+Ctrl + Shift + Space：触发器参数提示
+Ctrl + . ：触发器快速修复
+F12：转到定义
+Alt + F12：查看定义
+#
+#测试快捷键
+#测试快捷键就像你的代码的质量控制团队。它们帮助你编写和运行测试，以确保你的代码按预期工作。无论你是在测试一个函数还是整个项目，这些快捷键将帮助你捕捉错误并提高代码的质量。
+Ctrl + Shift + T：创建新的测试文件
+Ctrl + Shift + R：运行所有测试
+Ctrl + Shift + E：调试所有测试
+#
+#扩展快捷键
+#扩展快捷键就像一个宝库，为你的编码环境提供额外的工具。它们允许你添加新的功能，定制你的设置，并扩展VS Code的功能。有了这些快捷键，你就可以根据你的具体需要和喜好来定制你的编码环境。
+Ctrl + Shift + X：打开扩展程序
+Ctrl + Shift + F：查找扩展程序
+Ctrl + Shift + D：显示扩展的详细信息
+Ctrl + Shift + A：显示所有已安装的扩展程序
+Ctrl + Shift + C：显示推荐的扩展程序
