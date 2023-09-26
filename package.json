@@ -1,8 +1,8 @@
 {
   "name": "not-noly-hello",
-  "displayName": "Not Only Hello",
+  "displayName": "not only hello",
   "description": "hello, file size, highlight, run exe",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "publisher": "LoveScript",
   "engines": {
     "vscode": "^1.82.0"
@@ -19,7 +19,8 @@
     "onStartupFinished",
     "onCommand: fileConfig",
     "onCommand: runExe",
-    "onCommand: openHelloTxt"
+    "onCommand: openHelloTxt",
+    "onCommand: showWelcome"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -35,6 +36,10 @@
       {
         "command": "openHelloTxt",
         "title": "打开hello.txt"
+      },
+      {
+        "command": "showWelcome",
+        "title": "显示自定义欢迎页"
       }
     ],
     "menus": {
@@ -68,7 +73,7 @@
             "nothing"
           ],
           "default": "default",
-          "description": "Do you want to say hello?"
+          "description": "Whether to say hello"
         },
         "hello.2.id": {
           "type": "string",
@@ -100,10 +105,15 @@
           "default": "要看看月亮看看星空哦!",
           "description": "What you want to say at evening"
         },
+        "welcome": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether to use a custom welcome page"
+        },
         "highlight.1.if": {
           "type": "boolean",
           "default": true,
-          "description": "Do you want to use the highlight?"
+          "description": "Whether to use the highlight"
         }
       }
     }
