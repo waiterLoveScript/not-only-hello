@@ -2,10 +2,11 @@
 // Import the module and reference it with the alias vscode in your code below
 //const vscode = require('vscode');
 const hello = require('./include/hello');
-const welcome = require('./include/welcome');
+//const welcome = require('./include/welcome');
 const information = require('./include/information');
 const highlight = require('./include/highlight');
 const exec = require('./include/exec');
+const festival = require('./include/festival');
 
 let output = true;
 
@@ -32,10 +33,13 @@ async function activate(context) {
 	exec.activate(context);
 
 
-	welcome.activate(context);
+	//welcome.activate(context);
 	
 	
 	hello.activate(context);
+
+
+	festival.activate(context);
 
 
 }

@@ -4,6 +4,10 @@ All notable changes to the "Not Only Hello" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [v0.4.0]
+
+- Added holiday greetings. The HTML source code is derived from CodePen.
+
 ## [v0.3.2]
 
 - Optimized some features and added random greeting functionality.

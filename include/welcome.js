@@ -1,18 +1,31 @@
 const vscode = require('vscode');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
+
+const userHome = os.homedir();
+const configFolderPath = path.join(userHome, 'AppData', 'Roaming', 'Code', 'User', 'globalStorage', 'lovescript.not-only-hello', 'welcome');
+const welcomePagePath = path.join(configFolderPath, 'welcome.html');
+const dirPath = path.dirname(welcomePagePath);
+console.log(welcomePagePath);
+console.log(dirPath);
 
 function activate(context) {
-    context.subscriptions.push(vscode.commands.registerCommand('showWelcome', () => {
-        // Get the path to the HTML file
-        const welcomePagePath = vscode.Uri.file(
-            path.join(context.extensionPath, 'resources', 'config', 'welcome', 'welcome.html')
-        );
-        console.log(welcomePagePath);
-        // Read the HTML file content
-        const content = fs.readFileSync(welcomePagePath.fsPath, 'utf-8');
+    const disposable = vscode.commands.registerCommand('showWelcome', () => {
+        const welcomeDefaultPath = path.join(context.extensionPath, 'resources', 'config', 'welcome', 'welcome.html');
+        console.log(welcomeDefaultPath);
 
-        // Create and show a webview
+        if(!fs.existsSync(dirPath))
+		{
+			fs.mkdirSync(dirPath, {recursive : true});
+		}
+        if(!fs.existsSync(welcomePagePath))
+        {
+            const defaultContent = fs.readFileSync(welcomeDefaultPath, 'utf-8');
+            fs.writeFileSync(welcomePagePath, defaultContent);
+        }
+
+        const content = fs.readFileSync(welcomePagePath, 'utf-8');
         const panel = vscode.window.createWebviewPanel(
             'welcomePage',
             'Welcome Page',
@@ -21,10 +34,15 @@ function activate(context) {
                 enableScripts: true
             }
         );
-
-        // Set the HTML content of the webview
         panel.webview.html = content;
-    }));
+    });
+    context.subscriptions.push(disposable);
+
+    /*if(vscode.workspace.getConfiguration().get('welcome') === true && !vscode.window.activeTextEditor)
+    {
+        vscode.commands.executeCommand('showWelcome');
+        //vscode.commands.executeCommand('markdown.showPreview', vscode.Uri.file(welcomePagePath));
+    }*/
 }
 
 exports.activate = activate;

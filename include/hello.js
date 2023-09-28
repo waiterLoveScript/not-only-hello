@@ -3,13 +3,6 @@ const path = require('path');
 const fs = require('fs');
 const os = require('os');
 
-//const moduleDir = path.dirname(__filename);
-//const hellosFilePath = path.join(moduleDir, 'hello.txt');
-
-//const configFolderPath = vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders[0].uri.fsPath : path.join(os.homedir(), '.config', 'Code');
-//const configFolderUri = vscode.env.appSettingsHome;
-//const configFolderPath = configFolderUri.fsPath;
-
 const userHome = os.homedir();
 const configFolderPath = path.join(userHome, 'AppData', 'Roaming', 'Code', 'User', 'globalStorage', 'lovescript.not-only-hello', 'hello');
 const hellosFilePath = path.join(configFolderPath, 'hello.txt');
@@ -83,8 +76,8 @@ async function activate(context) {
 				fs.mkdirSync(dirPath, {recursive : true});
 				fs.writeFileSync(hellosFilePath, "One greeting per line, do not appear blank lines, this line can be deleted\n"+
 				"Lines that begin with # represent comments\n"+
-				"The template is an resources/hello .txt located in the extension's folder\n"+
-				"On my device this path is C:/Users/86157/.vscode/extensions/lovescript.not-only-hello/resources/hello.txt", 'utf-8');
+				"The template is an resources/config/hello/hello.txt located in the extension's folder\n"+
+				"On my device this path is C:/Users/86157/.vscode/extensions/lovescript.not-only-hello/resources/config/hello/hello.txt", 'utf-8');
 				vscode.workspace.openTextDocument(vscode.Uri.file(hellosFilePath)).then((document) => {
 					vscode.window.showTextDocument(document);
 				}).catch((error) => {

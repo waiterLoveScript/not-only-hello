@@ -1,7 +1,7 @@
 {
   "name": "not-noly-hello",
   "displayName": "not only hello",
-  "description": "hello, file size, highlight, run exe",
+  "description": "hello, file size, highlight, run exe, festival",
   "version": "0.4.0",
   "publisher": "LoveScript",
   "engines": {
@@ -19,8 +19,7 @@
     "onStartupFinished",
     "onCommand: fileConfig",
     "onCommand: runExe",
-    "onCommand: openHelloTxt",
-    "onCommand: showWelcome"
+    "onCommand: openHelloTxt"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -36,10 +35,6 @@
       {
         "command": "openHelloTxt",
         "title": "打开hello.txt"
-      },
-      {
-        "command": "showWelcome",
-        "title": "显示自定义欢迎页"
       }
     ],
     "menus": {
@@ -105,10 +100,10 @@
           "default": "要看看月亮看看星空哦!",
           "description": "What you want to say at evening"
         },
-        "welcome": {
+        "festival": {
           "type": "boolean",
-          "default": false,
-          "description": "Whether to use a custom welcome page"
+          "default": true,
+          "description": "Whether to use a festival page"
         },
         "highlight.1.if": {
           "type": "boolean",

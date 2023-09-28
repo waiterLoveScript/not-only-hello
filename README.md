@@ -9,7 +9,9 @@
 4. Support for highlighting specific annotations. Currently only C, CPP, JAVASCRIPT, TYPESCRIPT, JAVA files are supported.
 ![example](resources/pictures/exp1.png "example")
 
-5. More features are still in development, so stay tuned~
+5. You can get **blessings** during the holidays.
+
+6. More features are still in development, so stay tuned~
 
 # More
 
